@@ -1,0 +1,2 @@
+\contentsline {chapter}{\numberline {1}Linear operators and diagonalization}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Linear Operators: Introduction and Review.}{5}{section.1.1}%

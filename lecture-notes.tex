@@ -1,0 +1,186 @@
+% Lana's reconstruction and subsequent ripoff of Asuka's lecture notes' LaTeX preamble.
+
+\documentclass[12pt]{book}
+
+% Page layout
+\usepackage[
+    letterpaper,
+    reversemarginpar = true,
+    asymmetric       = true,
+    bindingoffset    = -0.5in,
+    left             = 1.5in,
+    right            = 1.25in,
+    top              = 1.40in,
+    bottom           = 1.8in,
+    footskip         = .25in
+]{geometry}
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage    {lmodern}
+\usepackage    {amsmath,amssymb,amsthm}
+\usepackage    {hyperref}
+\usepackage    {calculator}
+\usepackage    {etoolbox}
+\usepackage    {parskip}
+\usepackage    {geometry}
+\usepackage    {atbegshi}
+
+
+% Style for definitions, remarks, and examples: non-italicized text, bold title, numbered within sections
+\newtheoremstyle{definitionstyle}
+{1.0ex}     {1.0ex}
+{}          {}
+{\bfseries} {.}
+{0.6em}     {}
+
+% Definition of definitions, remarks, and examples
+\theoremstyle{definitionstyle}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}[definition]{Remark}
+
+% Definition of theorems, lemmas, examples, propositions, and corollaries
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{example}[definition]{Example}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+
+% Automatic numbering of equations
+\numberwithin{equation}{section}
+
+% Lengths and spacing
+\makeatletter
+\newlength{\boxmargin}
+\setlength{\parskip}{0.375em}
+\setlength{\boxmargin}{8pt}
+\g@addto@macro\normalsize{
+    \setlength\abovedisplayskip{12pt}
+    \setlength\belowdisplayskip{5pt}
+    \setlength\abovedisplayshortskip{0pt}
+    \setlength\belowdisplayshortskip{5pt}
+}
+\newcommand{\midbox}[1]{
+    \setlength{\fboxsep}{\boxmargin}
+    \fbox{
+	\parbox{\dimexpr\textwidth-(\boxmargin*2)\relax}{#1}
+    }
+}
+
+\makeatother
+
+\pagenumbering{gobble}
+
+% Useful definitions
+\newcommand{\rbb}{\mathbb{R}}
+\newcommand{\rbbm}{\mathbb{R}^m}
+\newcommand{\rbbn}{\mathbb{R}^n}
+\newcommand{\cbb}{\mathbb{C}}
+\newcommand{\fbb}{\mathbb{F}}
+\newcommand{\pbb}{\mathbb{P}}
+
+% Useful commands
+\newcommand{\bld}[1]{\textbf{#1}}
+\newcommand{\func}[3]{#1 : #2 \longmapsto #3}
+\newcommand{\eq}[1]{$#1$}
+\newcommand{\dispeq}[1]{\[#1\]}
+
+
+% ------------------------------ End Preamble -----------------------------
+
+\begin{document}
+
+% --------------------------------- Title ---------------------------------
+
+\title{Lana's Better CALC II Lecture Notes}
+\author{Lana Mantegazza}
+\date{\today}
+\maketitle
+\newpage
+\setcounter{page}{1}
+
+% Conditional chapter start reformatting
+% \let\oldchapter\chapter
+% \renewcommand{\chapter}[1]{\oldchapter{#1}\fontseries{l}\selectfont}
+% \let\oldsection\sectioon
+% \renewcommand{\section}[1]{\oldsection{#1}\textmd}
+
+% -------------------------------- Preface --------------------------------
+
+\chapter*{Preface}
+This is my attempt at making a more comprehensable set of lecture notes for the CALC II module. Due to its overall better legibility and structure, I've based the style of these lecture notes on that used in the LAG II lecture notes. Special thanks to me for spending a full ass day painstakingly reconstructing the \LaTeX \space preamble used in the LAG II lecture notes, I hope I've done a good enough job and that these lecture notes are at least slightly better than the ones provided by our module. Basically, after I say anything just imagine it says ``\textit{From what I've been able to gather}'' before it. Also this is my first time using \LaTeX \space so hope it all looks good and up to code.
+\\
+
+-- Lana Mantegazza M.D.\footnote{probably} Ph.D\footnotemark[1]
+
+% --------------------------- Table of Contents ---------------------------
+
+\newpage
+\setcounter{page}{1}
+
+\tableofcontents
+% ------------------------------- Chapter 1 -------------------------------
+
+\chapter{Introduction and Overview}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\section{Calculus I Review}
+This section is a brief overview of important definitions and theorems from Calculus I, here to ensure that specific mathematical objects used later on are clearly defined.
+Informally, a mathematical object is just anything we might consider in mathematics. Functions, sets, numbers, vectors, and matrices are all examples of mathematical objects, and the term is a useful tool for defining fundamental ``things'' as below.
+\definition{A \bld{set} is a collection of mathematical objects.}
+\definition{Let $A$ be a set, and let $a$ be any mathematical object. Then $a$ is an \bld{element} of $A$ if and only if $A$ contains $a$, denoted $a \in A$. }
+\definition{
+    Let $A$ and $B$ be sets, and let . Then a \bld{function}
+    \dispeq{
+	\func{f}{A}{B}
+    }
+    uniquely maps $a \in A$ to $b, \; \forall b \in B$.
+}
+
+\newpage
+\section{The Purpose of These Notes}
+
+In Calculus~1 and Calculus~2, our primary focus has been and will continue to be studying functions.
+
+It is useful to think of what we will do in this module in terms of mathematical objects and operators on those objects.
+
+The aim of this module is to expand the domain of what we learned previously in \mbox{Calculus~I} to higher dimensions.
+
+For the remainder of this document, unless stated otherwise, we will use the variables \eq{n} and \eq{m} to denote the dimension of the inputs and outputs of functions, respectively. Like so:
+\dispeq{
+    \func{f}{{\rbbm}}{{\rbbn}}
+}
+\chapter{Calculus II first bit}
+\section{Objects}
+
+We have those types of functions
+surfaces
+paths
+vector fields
+vector functions
+and all we do with them is define the following operators for them
+derivetives
+integrals
+intervals
+inverses
+
+And we have geometric interpretations of these functions
+vectors
+curves
+arcs
+where we do geometric things
+cross and dot products
+cross sections
+
+% todo workshop the structure a bit more
+
+\section{Surfaces}
+\definition{Let $\func{f}{\rbbm}{\rbb}$ be a function. Then $f$ is a \bld{surface}, and we call $f$ a \bld{scalar function} on $\rbbm$.}
+\section{Paths}
+\definition{Let $\func{\mathbf{r}}{\rbb}{\rbbn}$ be a function. Then $\mathbf{r}$ is a \bld{path}.}
+\section{Vector Fields}
+\section{Vector Functions}
+
+\end{document}
