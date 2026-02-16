@@ -25,30 +25,8 @@
 \usepackage    {parskip}
 \usepackage    {geometry}
 \usepackage    {atbegshi}
-
-
-% Style for definitions, remarks, and examples: non-italicized text, bold title, numbered within sections
-\newtheoremstyle{definitionstyle}
-{1.0ex}     {1.0ex}
-{}          {}
-{\bfseries} {.}
-{0.6em}     {}
-
-% Definition of definitions, remarks, and examples
-\theoremstyle{definitionstyle}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{remark}[definition]{Remark}
-
-% Definition of theorems, lemmas, examples, propositions, and corollaries
-\theoremstyle{plain}
-\newtheorem{theorem}[definition]{Theorem}
-\newtheorem{lemma}[definition]{Lemma}
-\newtheorem{example}[definition]{Example}
-\newtheorem{proposition}[definition]{Proposition}
-\newtheorem{corollary}[definition]{Corollary}
-
-% Automatic numbering of equations
-\numberwithin{equation}{section}
+\usepackage    {varwidth}
+\usepackage    {calc}
 
 % Lengths and spacing
 \makeatletter
@@ -72,7 +50,49 @@
 
 \pagenumbering{gobble}
 
-% Useful definitions
+% -------------------------------- Commands -------------------------------
+
+% Enable hanging indents for specific theorem environments
+\newcommand{\hangthm}[2]{
+    \AtBeginEnvironment{#1} {
+	\setlength{\hangindent}{\widthof{\textbf{#2 \csname the#1\endcsname}. \hspace{2pt}}}
+	\hangafter=1
+    }
+    \AtEndEnvironment{#1} { \noindent }
+}
+
+% Decleration and definition of \st and \suchthat
+\newcommand{\setst}[1]{\def\st{#1} \def\suchthat{#1}}
+\setst{such that}
+
+% Function definition
+\NewDocumentCommand{\funcimpl}{ o o m m m }{
+    #3 : #4 \longrightarrow #5
+    \IfValueT{#1} {
+	\IfValueT{#2} {
+	    { \text{\st} #1 \longmapsto #2 }
+	} 
+    } 
+}
+
+\NewDocumentCommand{\func} { o o m m m } {
+    \funcimpl [#1] [#2] {#3} {#4} {#5}
+}
+
+% Path definition
+\NewDocumentCommand{\fpath} { o o m m } {
+    \funcimpl [#1] [#2] {\mathbf{#3}} {\mathbb{R}} {\mathbb{R}^#4}
+}
+
+\NewDocumentCommand{\Definition} { m m } {
+    \begin{definition}\label{#1}
+	#2
+    \end{definition}
+}
+
+% ------------------------------- Shortcuts -------------------------------
+
+\newcommand{\bld}[1]{\textbf{#1}}
 \newcommand{\rbb}{\mathbb{R}}
 \newcommand{\rbbm}{\mathbb{R}^m}
 \newcommand{\rbbn}{\mathbb{R}^n}
@@ -80,12 +100,31 @@
 \newcommand{\fbb}{\mathbb{F}}
 \newcommand{\pbb}{\mathbb{P}}
 
-% Useful commands
-\newcommand{\bld}[1]{\textbf{#1}}
-\newcommand{\func}[3]{#1 : #2 \longmapsto #3}
-\newcommand{\eq}[1]{$#1$}
-\newcommand{\dispeq}[1]{\[#1\]}
+% Style for definitions, remarks, and examples: non-italicized text, bold title, numbered within sections
+\newtheoremstyle{definitionstyle}
+    {1.0ex}     {1.0ex}
+    {}          {}
+    {\bfseries} {.}
+    {0.6em}     {}
 
+% Definition of definitions, remarks, and examples
+\theoremstyle{definitionstyle}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}[definition]{Remark}
+
+% Definition of theorems, lemmas, examples, propositions, and corollaries
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{example}[definition]{Example}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+
+% Enable hanging indent for definitions
+\hangthm{definition}{Definition}
+
+% Automatic numbering of equations
+\numberwithin{equation}{section}
 
 % ------------------------------ End Preamble -----------------------------
 
@@ -122,65 +161,62 @@ This is my attempt at making a more comprehensable set of lecture notes for the 
 \tableofcontents
 % ------------------------------- Chapter 1 -------------------------------
 
-\chapter{Introduction and Overview}
+\chapter*{Introduction and Overview}
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-\section{Calculus I Review}
-This section is a brief overview of important definitions and theorems from Calculus I, here to ensure that specific mathematical objects used later on are clearly defined.
-Informally, a mathematical object is just anything we might consider in mathematics. Functions, sets, numbers, vectors, and matrices are all examples of mathematical objects, and the term is a useful tool for defining fundamental ``things'' as below.
-\definition{A \bld{set} is a collection of mathematical objects.}
-\definition{Let $A$ be a set, and let $a$ be any mathematical object. Then $a$ is an \bld{element} of $A$ if and only if $A$ contains $a$, denoted $a \in A$. }
-\definition{
-    Let $A$ and $B$ be sets, and let . Then a \bld{function}
-    \dispeq{
-	\func{f}{A}{B}
-    }
-    uniquely maps $a \in A$ to $b, \; \forall b \in B$.
-}
-
-\newpage
 \section{The Purpose of These Notes}
 
-In Calculus~1 and Calculus~2, our primary focus has been and will continue to be studying functions.
 
-It is useful to think of what we will do in this module in terms of mathematical objects and operators on those objects.
+    \[ \func{f}{{\rbbm}}{{\rbbn}}\]
+\section{A Brief Review of Calculus 1}
+\section {A Brief Review of Linear Algebra and Geometry}
 
-The aim of this module is to expand the domain of what we learned previously in \mbox{Calculus~I} to higher dimensions.
+\section{The Four Types of Functions}
 
-For the remainder of this document, unless stated otherwise, we will use the variables \eq{n} and \eq{m} to denote the dimension of the inputs and outputs of functions, respectively. Like so:
-\dispeq{
-    \func{f}{{\rbbm}}{{\rbbn}}
-}
-\chapter{Calculus II first bit}
-\section{Objects}
+In Calculus~1 and Calculus~2, our primary focus has been and will continue to be studying functions. The aim of this module is to expand the domain of what we learned previously in \mbox{Calculus~I} to higher dimensions, and there are four distinct types of functions which we will consider to achieve this aim.\\
 
-We have those types of functions
-surfaces
-paths
-vector fields
-vector functions
-and all we do with them is define the following operators for them
-derivetives
-integrals
-intervals
-inverses
+\begin{center}
+    \begin{tabular}{c|l}
+	$\func{\mathbf{r}}{\rbb^1}{\rbbn}$ & (paths in $\rbbn$)\\
+	$\func{f}{\rbb^m}{\rbb^1}$ & (scalar value functions on $\rbb^{m}$)\\
+	$\func{\mathbf{v}}{\rbb^n}{\rbbn}$ & (vector fields on $\rbbn$)\\
+	$\func{T}{\rbb^m}{\rbbn}$ & (vector functions from $\rbb^m$ to $\rbbn$)
+    \end{tabular}
+\end{center}
 
-And we have geometric interpretations of these functions
-vectors
-curves
-arcs
-where we do geometric things
-cross and dot products
-cross sections
+\vspace{0.5cm}
 
-% todo workshop the structure a bit more
+For each of these functions, we will explore how they are defined, how we can expand our definitions of derivatives and integrals to encompass them, and how these both relate to higher dimensional geometry. Moreover, we will see how calculus, with relation to these functions, gives rise to methods for computing useful geometric properties of objects in higher dimensional space.
 
-\section{Surfaces}
-\definition{Let $\func{f}{\rbbm}{\rbb}$ be a function. Then $f$ is a \bld{surface}, and we call $f$ a \bld{scalar function} on $\rbbm$.}
-\section{Paths}
-\definition{Let $\func{\mathbf{r}}{\rbb}{\rbbn}$ be a function. Then $\mathbf{r}$ is a \bld{path}.}
-\section{Vector Fields}
-\section{Vector Functions}
+\chapter{Paths and Parametric Equations}
+
+\setst{ : }
+Let us assume that $n \in \mathbb{N}$ is a natural number such that $n > 1$. This chapter will cover functions 
+\begin{equation}
+    \fpath{r}{n}
+\end{equation}
+mapping from $\rbb^1$ to $\rbbn$, usually referred to as paths or, equivalently, as parametric equations
+\begin{equation}
+    t \longmapsto (f(t),g(t))
+\end{equation}
+
+\section{Paths and Curves}
+
+There is an important distinction to be made between paths and curves. While paths in $\rbbn$ are functions, curves in $\rbbn$ are instead geometric objects in $n$ dimensional space.
+
+\begin{definition}\label{pathrerf}
+    Let $\fpath{r}{n}$ be a function. Then $\mathbf{r}$ is a \textbf{path} on $\rbbn$
+\end{definition}
+\begin{definition}
+    Let $C \subseteq \rbbn$ be a subset of points in $\rbbn$. If there exists some \hyperlink{\hypergetref{pathrerf}}{path} $\func{\mathbf{r}}{\rbb}{C\subseteq\rbbn}$ such that $\mathbf{r}$ is continuous, then C is a \textbf{curve}.
+
+continuous subsets $C \subseteq \rbbn$
+\end{definition}
+% \begin{example}
+%     Consider the parametric equations
+% \end{example}
+\newpage
+a
 
 \end{document}

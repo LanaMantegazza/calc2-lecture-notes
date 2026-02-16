@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  7 FEB 2026 16:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  11 FEB 2026 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -320,39 +320,60 @@ Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\c@definition=\count311
-\boxmargin=\skip58
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 92
-.
+(/home/lana/.texlive/2025/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box55
+\sift@deathcycles=\count311
+\@vwid@loff=\dimen173
+\@vwid@roff=\dimen174
+)
+==> First Aid for varwidth.sty applied!
+(/home/lana/.texlive/2025/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count312
+\calc@Bcount=\count313
+\calc@Adimen=\dimen175
+\calc@Bdimen=\dimen176
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count314
+\calc@Cskip=\skip60
+)
+\boxmargin=\skip61
+\c@definition=\count315
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 13
+1.
 
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count312
+\l__color_backend_stack_int=\count316
 )
 (build/lecture-notes.aux)
 \openout1 = `lecture-notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -389,7 +410,7 @@ LaTeX Font Info:    ... okay on input line 92.
 * \@reversemargintrue
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 92.
+Package hyperref Info: Link coloring OFF on input line 131.
 (build/lecture-notes.out) (build/lecture-notes.out)
 \@outlinefile=\write3
 \openout3 = `lecture-notes.out'.
@@ -397,41 +418,41 @@ Package hyperref Info: Link coloring OFF on input line 92.
 
 Couldn't patch \deferred@thm@head!
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-00.
+39.
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-00.
+39.
 
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-100.
+139.
 
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-100.
+139.
 
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 100.
+(Font)              <14.4> on input line 139.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 100.
+(Font)              <10> on input line 139.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 100.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 100
+(Font)              <7> on input line 139.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 139
 .
 
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 100
+LaTeX Font Info:    Trying to load font information for U+msb on input line 139
 .
 
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -442,24 +463,24 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/home/lana/.local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/
 home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 112.
+(Font)              <12> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 112.
+(Font)              <8> on input line 151.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 112.
+(Font)              <6> on input line 151.
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
+Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 115.
+(Font)              <5> on input line 154.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.119 \newpage
+l.158 \newpage
                [1
 
 ] (build/lecture-notes.toc)
@@ -471,56 +492,63 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.125 \chapter
-              {Introduction and Overview} [1
+l.164 \chapter
+              *{Introduction and Overview} [1
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.125 \chapter
-              {Introduction and Overview} [2
+l.164 \chapter
+              *{Introduction and Overview} [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+[1{/home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/
+lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/lana/.texlive
+/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [2
 
 ]
 Chapter 1.
-[1{/home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/
-lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/lana/.tex
-live/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}] [2]
-Chapter 2.
-[3
-
-] (build/lecture-notes.aux)
+[3] [4] (build/lecture-notes.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
-(rerunfilecheck)             Checksum: B3B8AC5F0970435A7E124CE20574FB68;1193.
+(rerunfilecheck)             Checksum: 11880150314EB71B49308198ED5C0726;1212.
  ) 
 Here is how much of TeX's memory you used:
- 10227 strings out of 467533
- 154523 string characters out of 5418975
- 572132 words of memory out of 5000000
- 38975 multiletter control sequences out of 15000+600000
+ 10390 strings out of 467533
+ 157495 string characters out of 5418975
+ 576986 words of memory out of 5000000
+ 39131 multiletter control sequences out of 15000+600000
  706222 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,855b,468s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/
-lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></home/lana/.tex
-live/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></home/lana/.texlive/2025/
-texmf-dist/fonts/type1/public/lm/lmr10.pfb></home/lana/.texlive/2025/texmf-dist
-/fonts/type1/public/lm/lmr12.pfb></home/lana/.texlive/2025/texmf-dist/fonts/typ
-e1/public/lm/lmr17.pfb></home/lana/.texlive/2025/texmf-dist/fonts/type1/public/
-lm/lmr7.pfb></home/lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb
-></home/lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></home/l
-ana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmro12.pfb></home/lana/.texl
-ive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/lana/.texlive/2025/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on build/lecture-notes.pdf (7 pages, 209894 bytes).
+ 75i,12n,79p,855b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{1.1.1} has been referenced but does not exist, repl
+aced by a fixed one
+
+</home/lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/la
+na/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></home/lana/.texli
+ve/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></home/lana/.texlive/2025/te
+xmf-dist/fonts/type1/public/lm/lmr10.pfb></home/lana/.texlive/2025/texmf-dist/f
+onts/type1/public/lm/lmr12.pfb></home/lana/.texlive/2025/texmf-dist/fonts/type1
+/public/lm/lmr17.pfb></home/lana/.texlive/2025/texmf-dist/fonts/type1/public/lm
+/lmr7.pfb></home/lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><
+/home/lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></home/lan
+a/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmro12.pfb></home/lana/.texliv
+e/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></home/lana/.texlive/2025/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/lecture-notes.pdf (8 pages, 212000 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

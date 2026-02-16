@@ -1,9 +1,6 @@
-\contentsline {chapter}{\numberline {1}Introduction and Overview}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Calculus I Review}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}The Purpose of These Notes}{2}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Calculus II first bit}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Objects}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Surfaces}{3}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Paths}{3}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Vector Fields}{3}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Vector Functions}{3}{section.2.5}%
+\contentsline {section}{\numberline {0.1}The Purpose of These Notes}{1}{section.0.1}%
+\contentsline {section}{\numberline {0.2}A Brief Review of Calculus 1}{1}{section.0.2}%
+\contentsline {section}{\numberline {0.3}A Brief Review of Linear Algebra and Geometry}{1}{section.0.3}%
+\contentsline {section}{\numberline {0.4}The Four Types of Functions}{1}{section.0.4}%
+\contentsline {chapter}{\numberline {1}Paths and Parametric Equations}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Paths and Curves}{3}{section.1.1}%
