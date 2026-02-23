@@ -63,6 +63,14 @@
     \AtEndEnvironment{#1} { \noindent }
 }
 
+% Enable indentation for all lines until conclusion of theorem environment
+\newcommand{\indentthm}[1]{
+    \AtBeginEnvironment{#1} {
+	\setlength{\hangindent}{2em}
+    }
+    \AtEndEnvironment{#1} { \noindent }
+}
+
 % Decleration and definition of \st and \suchthat
 \newcommand{\setst}[1]{\def\st{#1} \def\suchthat{#1}}
 \setst{such that}
@@ -102,28 +110,30 @@
 \newcommand{\fbb}{\mathbb{F}}
 \newcommand{\pbb}{\mathbb{P}}
 
-% Style for definitions, remarks, and examples: non-italicized text, bold title, numbered within sections
+% Style for definitions, remarks, theorems, lemmas, propositions, and corollaries
 \newtheoremstyle{definitionstyle}
     {1.0ex}     {1.0ex}
     {}          {}
-    {\bfseries} {.}
-    {0.6em}     {}
+    {\bfseries} {}
+    {0.6em}     {\thmname{#1}\thmnumber{ #2.}\thmnote{ #3 \vspace{0.5em} \\ }}
 
-% Definition of definitions, remarks, and examples
+% Definition of theorem environments
 \theoremstyle{definitionstyle}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{remark}[definition]{Remark}
 \newtheorem{theorem}[definition]{Theorem}
 \newtheorem{lemma}[definition]{Lemma}
-\newtheorem{example}[definition]{Example}
 \newtheorem{proposition}[definition]{Proposition}
 \newtheorem{corollary}[definition]{Corollary}
+\newtheorem{example}[definition]{Example}
 
-% Definition of theorems, lemmas, examples, propositions, and corollaries
-\theoremstyle{plain}
+\newtheorem{procedure}[definition]{Procedure}
 
 % Enable hanging indent for definitions
 \hangthm{definition}{Definition}
+
+% Enable full indentation for procedures
+% \indentthm{procedure}
 
 % Automatic numbering of equations
 \numberwithin{equation}{section}
@@ -170,9 +180,26 @@ This is my attempt at making a more comprehensable set of lecture notes for the 
 \section{The Purpose of These Notes}
 
 
-    \[ \func{f}{{\rbbm}}{{\rbbn}}\]
+%    \[ \func{f}{{\rbbm}}{{\rbbn}}\]
+\newpage
+
 \section{A Brief Review of Calculus 1}
+
+\newpage
+
 \section {A Brief Review of Linear Algebra and Geometry}
+
+
+A brief word on the Hadamard product of two vectors. The Hadamard product of two vectors $\mathbf{v}, \mathbf{w} \in \rbb^m$ is what we all thought multiplying vectors would look like before we learned about dot products and cross products. You take each entry of $\mathbf{v}$ and multiply it with the corresponding entry of $\mathbf{w}$, and you have the corresponding entry in the result. 
+
+\begin{definition}\label{hadamard-product}
+    Let $\mathbf{v}, \mathbf{w} \in \rbb^n$ be two vectors. Then the \textbf{Hadamard product} of $\mathbf{v}$ and $\mathbf{w}$ is the vector
+    \begin{equation}
+	\mathbf{v} \circ \mathbf{w} = \begin{pmatrix} v_1 w_1 \\ v_2 w_2 \\ \vdots \\ v_n w_n \end{pmatrix}
+    \end{equation}
+\end{definition}
+
+\newpage
 
 \section{The Four Types of Functions}
 
@@ -223,6 +250,12 @@ Let us assume that $m \in \mathbb{N}$ is a natural number such that $m > 1$. Thi
 \end{equation}
 mapping from $\rbb^m$ to $\rbb$, referred to as scalar value functions on $\rbb^m$, which are often used to define surfaces in $\rbb^{m+1}$. We will mostly be working with scalar value functions on $\rbb^2$.
 
+\vspace{0.5cm}
+
+\midbox{
+    \textbf{Note:} Most definitions will write functions as mapping $\mathbf{v} \longmapsto f(\mathbf{v})$. Keep in mind that writing $f(\mathbf{v})$ is equivalent to writing $f(x,y)$ when $m=2$, and that the use of $\mathbf{v}$ is to allow definitions to encompass higher dimensions.
+}
+
 \newpage
 
 \section{Scalar Value Functions and Surfaces}
@@ -247,9 +280,12 @@ Much like paths and curves, scalar value functions differ from surfaces. Scalar 
     $$.
 
     When plotted on an xyz plane, this surface is a paraboloid, seen in \ref{fig:paraboloid}.
+
+    \vspace{0.5cm}
     
     % Paraboloid
     \begin{figure}[h]\label{fig:paraboloid}
+	\centering
 	\includegraphics[width=0.4\textwidth]{paraboloid.png}
     \end{figure}
 
@@ -286,5 +322,84 @@ When working with scalar value functions, it is often useful to consider what is
     \includegraphics[width=0.33333\textwidth]{level-set-3.png}
 
 \end{example}
+
+\newpage
+
+\section{Partial Derivatives}
+To make our definitions more tractible to read, let us denote the unit vector in the $i^\text{th}$ direction of our vector space $\rbbm$ as
+
+\begin{equation}
+    \mathbf{\hat{v}}_i = \begin{pmatrix} 0 & 0 & \cdots & 1 & \cdots & 0 \end{pmatrix}^T
+\end{equation}
+
+where the $i^\text{th}$ entry is $1$, and all other entries are $0$.
+
+\vspace{0.5cm}
+
+\begin{definition}
+    Let $\func{f}{\rbb^m}{\rbb}$ be a scalar value function on $\rbb^m$. Then the \textbf{partial derivative of $f$ with respect to $v_i$} is
+    \begin{equation}
+	\frac{\partial f}{\partial v_i}(\mathbf{v}) = \lim_{h \to 0} \frac{f(\mathbf{v} + h\mathbf{\hat{v}}_i) - f(\mathbf{v})}{h}
+    \end{equation}
+\end{definition}
+
+While this symbol-soup may look weird as hell, it is a lot easier to grasp when we consider the partial derivatives of a scalar value function on $\rbb^2$. As the majority of the content for this module deals with scalar value functions in $\rbb^2$, it will be more useful to refer to Example \ref{2d-partial-derivative} for the first-principles definitions of partial derivatives.
+
+\vspace{0.5cm}
+
+\begin{example}\label{2d-partial-derivative}
+    Let $\func[(x,y)][x^2+y^2]{f}{\rbb^2}{\rbb}$ be a scalar value function on $\rbb^2$. Then the \textbf{partial derivative} of $f$ with respect to $x$ is
+	\begin{equation}
+	    f_x(x,y) = \frac{\partial f}{\partial x}(x,y) = \lim_{h \to 0} \frac{f(x + h, y) - f(x,y)}{h}
+	\end{equation}
+	and the partial derivative of $f$ with respect to $y$ is
+	\begin{equation}
+	    f_y(x,y) = \frac{\partial f}{\partial y}(x,y) = \lim_{h \to 0} \frac{f(x, y + h) - f(x,y)}{h}
+	\end{equation}
+\end{example}
+
+\vspace{0.5cm}
+
+Despite the complicated definition of partial derivatives, computing them is done rather easily. The procedure outlined below is for scalar value functions on $\rbb^2$, but can be easily generalized to higher dimensions.
+
+\begin{procedure}[Computing Partial Derivatives]
+    Let $\func[(x,y)][f(x,y)]{f}{\rbb^2}{\rbb}$ be a scalar value function on $\rbb^2$ and let $c \in \rbb$ be some constant.
+    Then
+    \begin{equation}
+	\frac{\partial f}{\partial x} = \frac{d}{dx}f(x,c)
+    \end{equation}
+\end{procedure}
+
+\newpage
+
+\section{The Gradient and The Nabla Operator}
+
+When considering scalar value functions from $\rbb^m$ to $\rbb$, it is useful to be able to denote the vector in $\rbb^m$ containing the partial derivatives of $f$ with respect to each of its inputs.
+
+\begin{definition}
+    Let $\func[\mathbf{v}][f(\mathbf{v})]{f}{\rbb^m}{\rbb}$ be a scalar value function on $\rbb^m$. Then the \textbf{gradient} of $f$ is the vector function
+	\begin{equation}
+	    \func[\mathbf{v}][\begin{pmatrix} \frac{\partial}{\partial v_1}f(\mathbf{v}) \\[6pt] \frac{\partial}{\partial v_2}f(\mathbf{v}) \\ \vdots \\ \frac{\partial}{\partial v_m}f(\mathbf{v}) \end{pmatrix}]{\nabla f}{\rbb^m}{\rbb^m}
+	\end{equation}
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{remark}
+    The upside-down triangle symbol ($\nabla$) is called the \textbf{nabla operator}, and is not exclusively used in denoting the gradient of a scalar value function. In what is -- for some reason -- referred to as an ``abuse\footnote{No notations were harmed in the making of these lecture notes} of notation'' in some literature surrounding vector calculus, the nabla operator is given its own definition which is very helpful to have for defining other types of derivatives that we will explore later in this module.
+\end{remark}
+
+\vspace{0.5cm}
+
+\begin{definition}
+    The \textbf{nabla operator} for the vector space $V\subseteq\rbb^m$ with bases $\{\mathbf{\hat{v}}_1, \mathbf{\hat{v}}_2, \cdots, \mathbf{\hat{v}}_m\}$ is defined to be the vector
+    \begin{equation}
+	\nabla = \begin{pmatrix} \frac{\partial}{\partial v_1} \\[6pt] \frac{\partial}{\partial v_2} \\ \vdots \\ \frac{\partial}{\partial v_m} \end{pmatrix}
+    \end{equation}
+\end{definition}
+
+\vspace{0.5cm}
+
+With this definition of the nabla operator, we can now also understand the gradient of a scalar value function as the \textit{Hadamard product} (see \ref{hadamard-product}) of the nabla operator and the scalar value function itself.
 
 \end{document}

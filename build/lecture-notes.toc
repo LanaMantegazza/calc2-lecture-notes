@@ -1,9 +1,11 @@
 \contentsline {section}{\numberline {0.1}The Purpose of These Notes}{1}{section.0.1}%
-\contentsline {section}{\numberline {0.2}A Brief Review of Calculus 1}{1}{section.0.2}%
-\contentsline {section}{\numberline {0.3}A Brief Review of Linear Algebra and Geometry}{1}{section.0.3}%
-\contentsline {section}{\numberline {0.4}The Four Types of Functions}{1}{section.0.4}%
-\contentsline {chapter}{\numberline {1}Paths and Parametric Equations}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Paths and Curves}{3}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Scalar Value Functions}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Scalar Value Functions and Surfaces}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Level Sets and Level Curves}{7}{section.2.2}%
+\contentsline {section}{\numberline {0.2}A Brief Review of Calculus 1}{2}{section.0.2}%
+\contentsline {section}{\numberline {0.3}A Brief Review of Linear Algebra and Geometry}{3}{section.0.3}%
+\contentsline {section}{\numberline {0.4}The Four Types of Functions}{4}{section.0.4}%
+\contentsline {chapter}{\numberline {1}Paths and Parametric Equations}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Paths and Curves}{5}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Scalar Value Functions}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Scalar Value Functions and Surfaces}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Level Sets and Level Curves}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Partial Derivatives}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}The Gradient and The Nabla Operator}{11}{section.2.4}%
