@@ -190,14 +190,188 @@ This is my attempt at making a more comprehensable set of lecture notes for the 
 
 \section {A Brief Review of Linear Algebra and Geometry}
 
+As this module is focused on \textbf{vector} calculus, it is important to have a solid foundation in linear algebra and geometry. Let us briefly review some of the key concepts from Linear Algebra and Geometry I.
+
+\subsection{Vectors}
+
+\begin{definition}
+    Let $ S = \{ v_1, v_2, \cdots, v_n\;|\; v_i \in \rbb, \forall i \leq n \in \mathbb{N} \} $ be a set of $n$ real numbers. Then an $n$-dimensional \textbf{vector} $\mathbf{v} \in \rbb^n$ is the ordered tuple of the elements of $S$ 
+    \begin{equation}
+	\mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{pmatrix} 
+    \end{equation}
+    sometimes written as 
+    \begin{equation}
+	\mathbf{v} = \begin{pmatrix} v_1 & v_2 & \cdots & v_n \end{pmatrix}^T
+    \end{equation}
+\end{definition}
+
+\begin{remark}
+    For the purposes of this document, if a vector $\mathbf{v}$ in $\rbbn$ is declared without being explicitly defined, you may assume that its entries are
+    $$ \mathbf{v} = \begin{pmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{pmatrix} $$
+\end{remark}
+
+\vspace{0.5cm}
+
+\begin{definition}
+    Let $\mathbf{v}$ be a vector. Then the \textbf{scalar multiplication} of $\mathbf{v}$ by a real number $c \in \rbb$ is the vector 
+    \begin{equation}
+	c\mathbf{v} = \begin{pmatrix} cv_1 \\ cv_2 \\ \vdots \\ cv_n \end{pmatrix}
+    \end{equation}
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{definition}
+	Let $\mathbf{v} $ be a vector in $\rbb^n$, Then the \textbf{magnitude} of $\mathbf{v}$ is the real number
+	\begin{equation}
+	\|\mathbf{v}\| = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}
+	\end{equation}
+\end{definition}
+
+\newpage
+
+\begin{definition}
+    A \textbf{unit vector} is a vector of magnitude $1$.
+\end{definition}
+
+\begin{definition}
+    Let $\mathbf{v} \in \rbb^n$ be a vector. Then to \textbf{normalize} $\mathbf{v}$ is to take the unit vector 
+	\begin{equation}
+	    \mathbf{\hat{v}}  = \frac{\mathbf{v}}{\|\mathbf{v}\|}
+	\end{equation}
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{remark}
+    When defining vectors in $\rbb^3$, it is common to denote the first, second, and third entries in a vector as coefficients of the unit vectors $\mathbf{\hat{i}}$, $\mathbf{\hat{j}}$, and $\mathbf{\hat{k}}$ respectively, where
+    \begin{equation}
+	\mathbf{\hat{i}} = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \quad \mathbf{\hat{j}} = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad \mathbf{\hat{k}} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+    \end{equation}
+\end{remark}
+
+\vspace{0.5cm}
+
+\begin{definition}
+    Let $\mathbf{v}, \mathbf{w} \in \rbb^n$ be two vectors. Then the \textbf{dot product} of $\mathbf{v}$ and $\mathbf{w}$ is the real number
+    \begin{equation}
+	\mathbf{v} \cdot \mathbf{w} = v_1 w_1 + v_2 w_2 + \cdots + v_n w_n
+    \end{equation}
+
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{definition}
+    Let $\mathbf{v}, \mathbf{w} \in \rbb^3$ be two vectors in $\rbb^3$. Then the \textbf{cross product} of $\mathbf{v}$ and $\mathbf{w}$ is the vector
+	\begin{equation}
+	    \mathbf{v} \times \mathbf{w} = \begin{pmatrix} v_2 w_3 - v_3 w_2 \\ v_3 w_1 - v_1 w_3 \\ v_1 w_2 - v_2 w_1 \end{pmatrix} = \det\begin{pmatrix} \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\ v_1 & v_2 & v_3 \\ w_1 & w_2 & w_3 \end{pmatrix}
+	\end{equation}
+\end{definition}
+
+\vspace{0.5cm}
 
 A brief word on the Hadamard product of two vectors. The Hadamard product of two vectors $\mathbf{v}, \mathbf{w} \in \rbb^m$ is what we all thought multiplying vectors would look like before we learned about dot products and cross products. You take each entry of $\mathbf{v}$ and multiply it with the corresponding entry of $\mathbf{w}$, and you have the corresponding entry in the result. 
 
 \begin{definition}\label{hadamard-product}
     Let $\mathbf{v}, \mathbf{w} \in \rbb^n$ be two vectors. Then the \textbf{Hadamard product} of $\mathbf{v}$ and $\mathbf{w}$ is the vector
     \begin{equation}
-	\mathbf{v} \circ \mathbf{w} = \begin{pmatrix} v_1 w_1 \\ v_2 w_2 \\ \vdots \\ v_n w_n \end{pmatrix}
+	\mathbf{v} \odot \mathbf{w} = \begin{pmatrix} v_1 w_1 \\ v_2 w_2 \\ \vdots \\ v_n w_n \end{pmatrix}
     \end{equation}
+\end{definition}
+
+\newpage
+
+\subsection{Matrices}
+
+Matrices are a way of representing linear transformations between vector spaces, and are useful for pretty much everything in vector calculus.
+
+\begin{definition}
+	Let $m, n \in \mathbb{N}$ be natural numbers. Then an $m$ by $n$ \textbf{matrix} is a rectangular array of real numbers with $m$ rows and $n$ columns
+	\begin{equation}
+	A = \begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{pmatrix}
+	\end{equation}
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{definition}
+	Let $A$ be an $m$ by $n$ matrix. Then the \textbf{transpose} of $A$ is the $n$ by $m$ matrix
+	\begin{equation}
+	A^T = \begin{pmatrix} a_{11} & a_{21} & \cdots & a_{m1} \\ a_{12} & a_{22} & \cdots & a_{m2} \\ \vdots & \vdots & \ddots & \vdots \\ a_{1n} & a_{2n} & \cdots & a_{mn} \end{pmatrix}
+	\end{equation}	
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{remark}
+    If $A$ is an $m$ by $n$ matrix and $m = n$, then $A$ is a square matrix.
+\end{remark}
+
+\begin{definition}
+	Let $A$ be an $m$ by $n$ matrix and let $B$ be an $n$ by $p$ matrix. Then the \textbf{matrix product} of $A$ and $B$ is the $m$ by $p$ matrix
+	\begin{equation}
+	    \begin{split}
+		C = AB & = \begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{pmatrix} \begin{pmatrix} b_{11} & b_{12} & \cdots & b_{1p} \\ b_{21} & b_{22} & \cdots & b_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ b_{n1} & b_{n2} & \cdots & b_{np} \end{pmatrix} \\ 
+		       & = \begin{pmatrix} c_{11} & c_{12} & \cdots & c_{1p} \\ c_{21} & c_{22} & \cdots & c_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ c_{m1} & c_{m2} & \cdots & c_{mp} \end{pmatrix} 
+	    \end{split}
+	\end{equation}
+	such that
+	\begin{equation}
+	    c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + \cdots + a_{in} b_{nj} \quad \forall i \leq m, j \leq p
+	\end{equation}
+\end{definition}
+
+\newpage
+
+\subsection{Geometry}
+
+A quick reminder of the definition of some basic geometric properties of objects in $\rbb^n$.
+
+\begin{definition}
+    Let $\mathbf{v}$ and $\mathbf{w}$ be two vectors in $\rbb^n$. Then the \textbf{angle} $\theta$ between $\mathbf{v}$ and $\mathbf{w}$ is such that
+    \begin{equation}
+         \cos(\theta) = \frac{\mathbf{v} \cdot \mathbf{w}}{\|\mathbf{v}\| \|\mathbf{w}\|}
+    \end{equation}
+    If $\mathbf{v}$ and $\mathbf{w}$ are vectors in $\rbb^3$, then the \textbf{angle} $\theta$ between $\mathbf{v}$ and $\mathbf{w}$ is also given by
+    \begin{equation}
+	\sin(\theta) = \frac{\|\mathbf{v} \times \mathbf{w}\|}{\|\mathbf{v}\| \|\mathbf{w}\|}
+    \end{equation}
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{definition}
+    Let $\mathbf{v}$ and $\mathbf{w}$ be two vectors in $\rbb^3$. Then $\mathbf{v}$ is \textbf{parallel} to $\mathbf{w}$ if and only if 
+    \begin{equation}
+	\mathbf{v} \times \mathbf{w} = \mathbf{0}
+    \end{equation}
+    and $\mathbf{v}$ is \textbf{normal} to $\mathbf{w}$ if and only if 
+    \begin{equation}
+	\mathbf{v} \cdot \mathbf{w} = 0
+    \end{equation}	
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{remark}
+    Finally, it is important to have an informal idea of what tangents and normals are. We will define them more formally in Chapters 1 and 2, but for now, refer to the following informal definitions.
+\end{remark}
+
+\vspace{0.5cm}
+
+\begin{definition}[Informal Definition of a Tangent] 
+    \noindent
+    \setlength{\hangindent}{0pt}
+    Let $C$ be a curve in $\rbb^n$, and let $p$ be a point on $C$. Then the \textbf{tangent} to $C$ at $p$ is the line which just touches $C$ at $p$, and is parallel to the direction in which $C$ at $p$.
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{definition}[Informal Definition of a Normal]
+    \noindent
+    \setlength{\hangindent}{0pt}
+    Let $S$ be a surface in $\rbb^n$, and let $p$ be a point on $S$. Then the \textbf{normal} to $S$ at $p$ is the line which just touches $S$ at $p$, and is perpendicular to the tangent plane to $S$ at $p$.
 \end{definition}
 
 \newpage
@@ -500,6 +674,8 @@ Now, equipped with these tools, we can explore how we can use calculus to comput
 \newpage
 
 \section{Tangent and Normal Vectors to Surfaces}
+
+Much like how paths have a tangent vector at each point, and a plane of possible normal vectors at each point, surfaces have a single normal vector at each point, and a plane of possible tangent vectors at each point.
 
 \newpage
 

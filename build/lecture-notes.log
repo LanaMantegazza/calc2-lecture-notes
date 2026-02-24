@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  24 FEB 2026 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.6)  24 FEB 2026 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,57 +545,61 @@ een already used, duplicate ignored
 l.177 \chapter
               *{Introduction and Overview} [2
 
-] [1] [2] [3{/home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{
-/home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/lan
+] [1] [2] [3{/home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.e
+nc}{/home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/home/lan
 a/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/home/lana/.texliv
 e/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
 
-[4]
-Chapter 1.
-[5
+[7] [8
 
-] [6
+]
+Chapter 1.
+[9] [10
 
 ]
 Chapter 2.
 
-Overfull \hbox (8.63321pt too wide) in paragraph at lines 258--259
+Overfull \hbox (8.63321pt too wide) in paragraph at lines 432--433
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
-[7]
-<./resources/paraboloid.png, id=145, 570.13pt x 549.05125pt>
+[11]
+<./resources/paraboloid.png, id=212, 570.13pt x 549.05125pt>
 File: ./resources/paraboloid.png Graphic file (type png)
 <use ./resources/paraboloid.png>
-Package pdftex.def Info: ./resources/paraboloid.png  used on input line 293.
+Package pdftex.def Info: ./resources/paraboloid.png  used on input line 467.
 (pdftex.def)             Requested size: 158.09337pt x 152.24203pt.
- [8 <./resources/paraboloid.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-05.
+ [12 <./resources/paraboloid.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
+79.
 
 (/home/lana/.texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<./resources/paraboloid-cross.png, id=158, 1059.96pt x 999.735pt>
+<./resources/paraboloid-cross.png, id=224, 1059.96pt x 999.735pt>
 File: ./resources/paraboloid-cross.png Graphic file (type png)
 <use ./resources/paraboloid-cross.png>
-Package pdftex.def Info: ./resources/paraboloid-cross.png  used on input line 3
-12.
+Package pdftex.def Info: ./resources/paraboloid-cross.png  used on input line 4
+86.
 (pdftex.def)             Requested size: 225.84375pt x 213.00148pt.
- [9{/home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./resou
-rces/paraboloid-cross.png>]
+ [13{/home/lana/.texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./reso
+urces/paraboloid-cross.png>]
 ! Missing } inserted.
 <inserted text> 
                 }
-l.344 	\end{split}
+l.518 	\end{split}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -604,7 +608,7 @@ Try to go on, since this might almost work.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.344 	\end{split}
+l.518 	\end{split}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -613,7 +617,7 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.344 	\end{split}
+l.518 	\end{split}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -622,7 +626,7 @@ Try to go on, since this might almost work.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.344 	\end{split}
+l.518 	\end{split}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -631,7 +635,7 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.344 	\end{split}
+l.518 	\end{split}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -640,7 +644,7 @@ Try to go on, since this might almost work.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.344 	\end{split}
+l.518 	\end{split}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -649,7 +653,7 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.344 	\end{split}
+l.518 	\end{split}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -658,93 +662,86 @@ Try to go on, since this might almost work.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.344 	\end{split}
+l.518 	\end{split}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-[10]
-<./resources/level-set-1.png, id=180, 569.12625pt x 558.085pt>
+[14]
+<./resources/level-set-1.png, id=245, 569.12625pt x 558.085pt>
 File: ./resources/level-set-1.png Graphic file (type png)
 <use ./resources/level-set-1.png>
-Package pdftex.def Info: ./resources/level-set-1.png  used on input line 381.
+Package pdftex.def Info: ./resources/level-set-1.png  used on input line 555.
 (pdftex.def)             Requested size: 150.5602pt x 147.63635pt.
-<./resources/level-set-2.png, id=181, 636.3775pt x 633.36626pt>
+<./resources/level-set-2.png, id=246, 636.3775pt x 633.36626pt>
 File: ./resources/level-set-2.png Graphic file (type png)
 <use ./resources/level-set-2.png>
-Package pdftex.def Info: ./resources/level-set-2.png  used on input line 382.
+Package pdftex.def Info: ./resources/level-set-2.png  used on input line 556.
 (pdftex.def)             Requested size: 150.5602pt x 149.84618pt.
-<./resources/level-set-3.png, id=182, 657.45625pt x 657.45625pt>
+<./resources/level-set-3.png, id=247, 657.45625pt x 657.45625pt>
 File: ./resources/level-set-3.png Graphic file (type png)
 <use ./resources/level-set-3.png>
-Package pdftex.def Info: ./resources/level-set-3.png  used on input line 383.
+Package pdftex.def Info: ./resources/level-set-3.png  used on input line 557.
 (pdftex.def)             Requested size: 150.5602pt x 150.55968pt.
 
-Overfull \hbox (5.21523pt too wide) in paragraph at lines 381--384
+Overfull \hbox (5.21523pt too wide) in paragraph at lines 555--558
 [][] [] [] 
  []
 
-[11 <./resources/level-set-1.png> <./resources/level-set-2.png> <./resources/le
-vel-set-3.png>] [12]
-<./resources/paraboloid-cross-xz_y-1_3q.png, id=209, 538.01pt x 528.97626pt>
+[15 <./resources/level-set-1.png> <./resources/level-set-2.png> <./resources/le
+vel-set-3.png>] [16]
+<./resources/paraboloid-cross-xz_y-1_3q.png, id=275, 538.01pt x 528.97626pt>
 File: ./resources/paraboloid-cross-xz_y-1_3q.png Graphic file (type png)
 <use ./resources/paraboloid-cross-xz_y-1_3q.png>
 Package pdftex.def Info: ./resources/paraboloid-cross-xz_y-1_3q.png  used on in
-put line 449.
+put line 623.
 (pdftex.def)             Requested size: 150.5602pt x 148.03162pt.
-<./resources/paraboloid-cross-plane-xz_y-1_3q.png, id=210, 667.49374pt x 577.15
+<./resources/paraboloid-cross-plane-xz_y-1_3q.png, id=276, 667.49374pt x 577.15
 625pt>
 File: ./resources/paraboloid-cross-plane-xz_y-1_3q.png Graphic file (type png)
 <use ./resources/paraboloid-cross-plane-xz_y-1_3q.png>
 Package pdftex.def Info: ./resources/paraboloid-cross-plane-xz_y-1_3q.png  used
- on input line 450.
+ on input line 624.
 (pdftex.def)             Requested size: 150.5602pt x 130.18039pt.
-<./resources/parabola-xz_y-1.png, id=211, 639.38875pt x 643.40375pt>
+<./resources/parabola-xz_y-1.png, id=277, 639.38875pt x 643.40375pt>
 File: ./resources/parabola-xz_y-1.png Graphic file (type png)
 <use ./resources/parabola-xz_y-1.png>
-Package pdftex.def Info: ./resources/parabola-xz_y-1.png  used on input line 45
-1.
+Package pdftex.def Info: ./resources/parabola-xz_y-1.png  used on input line 62
+5.
 (pdftex.def)             Requested size: 150.5602pt x 151.50424pt.
 
-Overfull \hbox (5.21523pt too wide) in paragraph at lines 449--452
+Overfull \hbox (5.21523pt too wide) in paragraph at lines 623--626
 [][] [] [] 
  []
 
-<./resources/parabola-derivative-xz_y-1.png, id=213, 634.37pt x 356.33125pt>
+<./resources/parabola-derivative-xz_y-1.png, id=279, 634.37pt x 356.33125pt>
 File: ./resources/parabola-derivative-xz_y-1.png Graphic file (type png)
 <use ./resources/parabola-derivative-xz_y-1.png>
 Package pdftex.def Info: ./resources/parabola-derivative-xz_y-1.png  used on in
-put line 459.
+put line 633.
 (pdftex.def)             Requested size: 225.84375pt x 126.86005pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13 <./resources/paraboloid-cross-xz_y-1_3q.png> <./resources/paraboloid-cross
+ [17 <./resources/paraboloid-cross-xz_y-1_3q.png> <./resources/paraboloid-cross
 -plane-xz_y-1_3q.png> <./resources/parabola-xz_y-1.png> <./resources/parabola-d
-erivative-xz_y-1.png>] [14] [15] [16] (build/lecture-notes.aux)
+erivative-xz_y-1.png>] [18] [19] [20] (build/lecture-notes.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `lecture-notes.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `lecture-notes.out':
-(rerunfilecheck)             Before: BA29C36A214C99D037D29C59E3CE1678;2868
-(rerunfilecheck)             After:  C35C7F3F1E3BE0EB4A854FE5394086A3;2863.
+Package rerunfilecheck Info: File `lecture-notes.out' has not changed.
+(rerunfilecheck)             Checksum: 576D4BB2D8E72989025B3D34465884D4;3164.
  ) 
 Here is how much of TeX's memory you used:
- 11427 strings out of 467533
- 175494 string characters out of 5418975
- 590806 words of memory out of 5000000
- 40075 multiletter control sequences out of 15000+600000
- 718406 words of font info for 99 fonts, out of 8000000 for 9000
+ 11472 strings out of 467533
+ 176170 string characters out of 5418975
+ 599814 words of memory out of 5000000
+ 40079 multiletter control sequences out of 15000+600000
+ 721404 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,79p,855b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,23n,79p,855b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/
 lana/.texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></home/lana/.tex
 live/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></home/lana/.texlive/2025
@@ -760,10 +757,10 @@ onts/type1/public/lm/lmro12.pfb></home/lana/.texlive/2025/texmf-dist/fonts/type
 1/public/lm/lmsy10.pfb></home/lana/.texlive/2025/texmf-dist/fonts/type1/public/
 lm/lmsy8.pfb></home/lana/.texlive/2025/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on build/lecture-notes.pdf (20 pages, 975497 bytes).
+Output written on build/lecture-notes.pdf (24 pages, 988758 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 
