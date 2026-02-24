@@ -14,4 +14,5 @@
 \contentsline {section}{\numberline {2.4}Partial Derivatives}{16}{section.2.4}%
 \contentsline {section}{\numberline {2.5}The Gradient and The Nabla Operator}{18}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Directional Derivatives}{20}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Tangent and Normal Vectors to Surfaces}{23}{section.2.7}%
+\contentsline {section}{\numberline {2.7}Tangent Vectors to Surfaces}{22}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Normal Vectors to Surfaces}{23}{section.2.8}%

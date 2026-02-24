@@ -276,7 +276,7 @@ As this module is focused on \textbf{vector} calculus, it is important to have a
 
 \vspace{0.5cm}
 
-\begin{definition}
+\begin{definition}\label{cross-product}
     Let $\mathbf{v}, \mathbf{w} \in \rbb^3$ be two vectors in $\rbb^3$. Then the \textbf{cross product} of $\mathbf{v}$ and $\mathbf{w}$ is the vector
 	\begin{equation}
 	    \mathbf{v} \times \mathbf{w} = \begin{pmatrix} v_2 w_3 - v_3 w_2 \\ v_3 w_1 - v_1 w_3 \\ v_1 w_2 - v_2 w_1 \end{pmatrix} = \det\begin{pmatrix} \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\ v_1 & v_2 & v_3 \\ w_1 & w_2 & w_3 \end{pmatrix}
@@ -364,6 +364,15 @@ A quick reminder of the definition of some basic geometric properties of objects
     \begin{equation}
 	\mathbf{v} \cdot \mathbf{w} = 0
     \end{equation}	
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{definition}\label{coplanar}
+    Let $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ be three vectors in $\rbb^3$. Then $\mathbf{u}$, $\mathbf{v}$, and $\mathbf{w}$ are \textbf{coplanar} if and only if
+    \begin{equation}
+	\mathbf{v} \cdot (\mathbf{w} \times \mathbf{u}) = 0
+    \end{equation}
 \end{definition}
 
 \vspace{0.5cm}
@@ -779,22 +788,74 @@ While partial derivatives are useful for getting the rate of change of some scal
     \end{enumerate}
 \end{proof}
 
-
-\newpage
-
 Now, equipped with these tools, we can explore how we can use calculus to compute some useful geometric properties of the surfaces described by these scalar value functions.
 
 \newpage
 
-\section{Tangent and Normal Vectors to Surfaces}
+\section{Tangent Vectors to Surfaces}
 
-Much like how paths have a tangent vector at each point, and a plane of possible normal vectors at each point, surfaces have a single normal vector at each point, and a plane of possible tangent vectors at each point.
+Much like how paths have a normalized tangent vector at each point, and a plane of possible normal vectors at each point, surfaces have a single normalized normal vector at each point, and a plane of possible tangent vectors at each point. First, let us farmiliarize ourselves with the definition of tangent vectors to surfaces.
+
+\vspace{0.5cm}
 
 \begin{definition}
-    Let $\func{f}{\rbb^m}{\rbb}$ be a scalar value function on $\rbb^m$, and let $S \subseteq \rbb^{m+1}$ be the surface described by $f$. Then the \textbf{tangent plane} to $S$ at some point $\mathbf{v} \in \rbb^m$ is the plane
+    Let $\func{f}{\rbb^2}{\rbb}$ be a scalar value function on $\rbb^2$ describing the surface $S \subseteq \rbb^3$, and let $\mathbf{p} \in \rbb^2$ be some point on $S$. If 
     \begin{equation}
-	P = \{\mathbf{v}
+	\exists \mathbf{u} = \begin{pmatrix} u_x \\ u_y \end{pmatrix} \in \rbb^2 \text{ such that } \mathbf{v} = \begin{pmatrix} u_x \\ u_y \\ \nabla_\mathbf{u} f(\mathbf{p}) \end{pmatrix},
     \end{equation}
+    then $\mathbf{v}$ is \textbf{tangent} to the surface $S$ at the point $\mathbf{p}$.
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{definition}
+    Let $\func{f}{\rbb^2}{\rbb}$ be a scalar value function on $\rbb^2$ describing the surface $S \subseteq \rbb^3$, and let $\mathbf{p} \in \rbb^2$ be some point on $S$. Then the set of all points $\mathbf{v} \in \rbb^3$ tangent to the surface $S$ at the point $\mathbf{p}$ is the \textbf{tangent plane} to $S$ at $\mathbf{p}$
+    \begin{equation}
+	P = \left\{ \mathbf{v} \in \rbb^3 : \mathbf{v} = \begin{pmatrix} u_x \\ u_y \\ \nabla_\mathbf{u} f(\mathbf{p}) \end{pmatrix}, \forall \mathbf{u} \in \rbb^2 \right\}
+    \end{equation}
+\end{definition}
+
+\vspace{0.5cm}
+
+\begin{remark}
+    Here, we are defining tangent vectors to a surface at a point in terms of the directional derivative of the scalar value function describing that surface. While this may seem like an overly complicated it also gives insight into a useful corollary of \ref{directional-derivative-thm}. 
+\end{remark}
+\vspace{0.5cm}
+\begin{corollary}\label{directional-derivatives-are-tangent}
+    Let $\func{f}{\rbb^m}{\rbb}$ be a scalar value function on $\rbb^m$, and let $S \subseteq \rbb^{m+1}$ be the surface described by $f$. Then the vector
+    \begin{equation}
+	\mathbf{v} = \begin{pmatrix} u_1 \\ \vdots \\ u_m \\ \nabla_\mathbf{u} f(\mathbf{p}) \end{pmatrix}
+    \end{equation}
+    is tangent to the surface $S$ at the point $\mathbf{p}$ for all $\mathbf{u} \in \rbb^m$.
+\end{corollary}
+
+\vspace{0.5cm}
+
+From this we can derive yet another corollary concerning the partial derivatives of a scalar value function themselves. We will write this one out for the case of scalar value functions on $\rbb^2$, but it can be generalized to higher dimensions.
+
+\begin{corollary}\label{partial-derivatives-are-tangent}
+	Let $\func{f}{\rbb^m}{\rbb}$ be a scalar value function on $\rbb^2$, and let $S \subseteq \rbb^{3}$ be the surface described by $f$. Then the vectors
+	\begin{equation}
+	    \mathbf{v} = \begin{pmatrix} 1 \\ 0 \\ f_x \end{pmatrix} \text{ and } \mathbf{v} = \begin{pmatrix} 0 \\ 1 \\ f_y \end{pmatrix}
+	\end{equation}
+	
+	\vspace{0.5cm}
+
+	are tangent to the surface $S$ at the point $\mathbf{p}$.
+\end{corollary}
+
+\vspace{0.5cm}
+
+\section{Normal Vectors to Surfaces}
+
+Now that we have defined tangent vectors to surfaces, we can define normal vectors to surfaces as well.
+
+\begin{definition}
+    Let $\func{f}{\rbb^m}{\rbb}$ be a scalar value function on $\rbb^m$, and let $S \subseteq \rbb^{m+1}$ be the surface described by $f$. If $P \subseteq \rbb^{m+1}$ is the tangent plane to $S$ at some point $\mathbf{p} \in \rbb^m$, then a vector $\mathbf{n} \in \rbb^{m+1}$ is a \textbf{normal vector} to $S$ at $\mathbf{p}$ if and only if
+    \begin{equation}
+	\mathbf{n} \cdot \mathbf{v} = 0, \forall \mathbf{v} \in P
+    \end{equation}
+    i.e. $\mathbf{n}$ is orthogonal to all tangent vectors to $S$ at $\mathbf{p}$.
 \end{definition}
 
 \vspace{0.5cm}
@@ -802,21 +863,37 @@ Much like how paths have a tangent vector at each point, and a plane of possible
 \begin{theorem}\label{normal-vector-scalar-value-function}
     Let $\func{f}{\rbb^m}{\rbb}$ be a scalar value function on $\rbb^m$, and let $S \subseteq \rbb^{m+1}$ be the surface described by $f$. Then the \textbf{normal vector} to $S$ at some point $\mathbf{v} \in \rbb^m$ is the vector
     \begin{equation}
-	\mathbf{n} = \begin{pmatrix} \frac{\partial}{\partial v_1}f(\mathbf{v}) \\[6pt] \frac{\partial}{\partial v_2}f(\mathbf{v}) \\ \vdots \\ \frac{\partial}{\partial v_m}f(\mathbf{v}) \\ -1 \end{pmatrix}
+	\mathbf{n} = \begin{pmatrix} \uparrow \\ \nabla f \\ \downarrow \\ -1 \end{pmatrix} = \begin{pmatrix} \frac{\partial}{\partial v_1}f(\mathbf{v}) \\[6pt] \frac{\partial}{\partial v_2}f(\mathbf{v}) \\ \vdots \\ \frac{\partial}{\partial v_m}f(\mathbf{v}) \\ -1 \end{pmatrix}
     \end{equation}
 \end{theorem}
 
-\begin{proof}[Proof of \ref{normal-vector-scalar-value-function}]
-    Let
+\vspace{0.5cm}
+
+\begin{proof}[Proof of Theorem \ref{normal-vector-scalar-value-function} for scalar value functions on $\rbb^2$]
+    \noindent \\
+    Let $\func[(x,y)][f(x,y)]{f}{\rbb^2}{\rbb}$ be a scalar value function on $\rbb^2$, and let $S \subseteq \rbb^3$ be the surface described by $f$.
+    We must prove that a normal vector to the surface $S$ at some point $\mathbf{p} \in \rbb^2$ is $$\mathbf{n} = \begin{pmatrix} f_x \\ f_y \\ -1 \end{pmatrix}$$
+
+    \begin{enumerate}
+	\item Recall the definition of a normal vector. The vector $\mathbf{n}$ is a normal vector to $S$ at $\mathbf{p}$ $\iff$ $\mathbf{n}$ is orthogonal to all tangent vectors to $S$ at $\mathbf{p}$.
+	\item By Corrolary \ref{partial-derivatives-are-tangent}, we know that the vectors
+	    \begin{equation}
+		\mathbf{v}_1 = \begin{pmatrix} 1 \\ 0 \\ f_x \end{pmatrix} \text{ and } \mathbf{v}_2 = \begin{pmatrix} 0 \\ 1 \\ f_y \end{pmatrix}
+	    \end{equation}
+	    are tangent to the surface $S$ at the point $\mathbf{p}$.
+	\item Consider $\mathbf{v}_1 \times \mathbf{v}_2$.
+	    \begin{equation}
+		\begin{split}
+		    \mathbf{v}_1 \times \mathbf{v}_2 & = \begin{vmatrix} \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\ 1 & 0 & f_x \\ 0 & 1 & f_y \end{vmatrix} \\
+		    & = (0 - f_x)\mathbf{\hat{i}} - (f_y - 0)\mathbf{\hat{j}} + (1 - 0)\mathbf{\hat{k}} \\
+		    & = \begin{pmatrix} f_x \\ f_y \\ -1 \end{pmatrix} \\
+			\implies \mathbf{n} & = \mathbf{v}_1 \times \mathbf{v}_2
+		\end{split}
+	    \end{equation}
+	\item Recall that, by the the definition of the cross product, $\mathbf{n} = \mathbf{v}_1 \times \mathbf{v}_2$ must be orthogonal to both $\mathbf{v}_1$ and $\mathbf{v}_2$.
+	\item As $\mathbf{v}_1$ and $\mathbf{v}_2$ are coplanar (see \ref{coplanar}) with all other tangent vectors to $S$ at $\mathbf{p}$, $\mathbf{n}$ must be orthogonal to all tangent vectors to $S$ at $\mathbf{p}$.
+    \end{enumerate}
+    
 \end{proof}
-
-\begin{definition}
-    Let $\func{f}{\rbb^m}{\rbb}$ be a scalar value function on $\rbb^m$, and let $S \subseteq \rbb^{m+1}$ be the surface described by $f$. Then a \textbf{tangent vector} to $S$ at some point $\mathbf{v} \in \rbb^m$ is a vector $\mathbf{t}$ such that
-\end{definition}
-
-\begin{theorem}
-\end{theorem}
-
-
 
 \end{document}
