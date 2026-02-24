@@ -13,5 +13,5 @@
 \contentsline {section}{\numberline {2.3}Level Sets and Level Curves}{15}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Partial Derivatives}{16}{section.2.4}%
 \contentsline {section}{\numberline {2.5}The Gradient and The Nabla Operator}{18}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Tangent and Normal Vectors to Surfaces}{19}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Directional Derivatives}{20}{section.2.7}%
+\contentsline {section}{\numberline {2.6}Directional Derivatives}{20}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Tangent and Normal Vectors to Surfaces}{23}{section.2.7}%
